@@ -1,3 +1,4 @@
-# deploy/after_install
 #!/bin/bash
-service httpd start 2>&1
+service httpd start
+#service mysqld start
+
