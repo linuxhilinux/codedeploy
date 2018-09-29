@@ -3,6 +3,10 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/
+    permissions:
+   - object:  deploy/after_install.sh 
+     mode: 644
+
 hooks:
   BeforeInstall:
     - location: deploy/before_install.sh
