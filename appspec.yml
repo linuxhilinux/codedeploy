@@ -2,11 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/
-    permissions:
-   - object:  deploy/after_install.sh 
-     mode: 644
-
+    destination: /var/www/html
+permissions:
+  - object: /var/www/html/deploy
+    owner: root
+    mode: 777
+    type:
+      - directory
 hooks:
   BeforeInstall:
     - location: deploy/before_install.sh
