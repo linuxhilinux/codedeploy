@@ -1,2 +1,2 @@
 #!/bin/bash
-systemctl restart nginx
+systemctl stop nginx 2> /dev/null
